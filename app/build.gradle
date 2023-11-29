@@ -15,20 +15,22 @@ def reactNativeArchitectures() {
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
 }
 android {
-    signingConfigs {
-        release {
-            storeFile file(storePath)
-            keyAlias alias
-            storePassword storePwd
-            keyPassword aliasPwd
-        }
-        debug {
-            storeFile file(storePath)
-            keyAlias alias
-            storePassword storePwd
-            keyPassword aliasPwd
-        }
-    }
+//    signingConfigs {
+//        release {
+//            //storeFile file(storePath)
+//            storeFile file("key.jks")
+//            keyAlias alias
+//            storePassword storePwd
+//            keyPassword aliasPwd
+//        }
+//        debug {
+//            //storeFile file(storePath)
+//            storeFile file("key.jks")
+//            keyAlias alias
+//            storePassword storePwd
+//            keyPassword aliasPwd
+//        }
+//    }
     namespace 'com.chat'
     compileSdk 33
     defaultConfig {
@@ -48,12 +50,12 @@ android {
         }
     }
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-            multiDexEnabled true
-        }
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+////            signingConfig signingConfigs.release
+//            multiDexEnabled true
+//        }
     }
     applicationVariants.configureEach {
         variant ->

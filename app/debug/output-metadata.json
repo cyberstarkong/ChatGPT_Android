@@ -1,0 +1,72 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.chat",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "UNIVERSAL",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 33,
+      "versionName": "2.4.4",
+      "outputFile": "chat-v2.4.4-universal.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 33002,
+      "versionName": "2.4.4",
+      "outputFile": "chat-v2.4.4-x86.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 33001,
+      "versionName": "2.4.4",
+      "outputFile": "chat-v2.4.4-armeabi-v7a.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "arm64-v8a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 33003,
+      "versionName": "2.4.4",
+      "outputFile": "chat-v2.4.4-arm64-v8a.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 33004,
+      "versionName": "2.4.4",
+      "outputFile": "chat-v2.4.4-x86_64.apk"
+    }
+  ],
+  "elementType": "File"
+}

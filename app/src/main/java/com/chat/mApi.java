@@ -30,7 +30,7 @@ public class mApi {
     public static boolean
             stream = true,
             use_vits = false;
-    public static String API_KEY = "";
+    public static String API_KEY = "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";
     public static void showMsg(Context ct, String s){
         new Thread(()->{
             try{

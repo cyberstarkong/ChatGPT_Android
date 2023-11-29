@@ -150,7 +150,7 @@ public class Chat extends AppCompatActivity {
             }
         });
         models_new = new ArrayList<>(Arrays.asList("gpt-3.5-turbo", "gpt-3.5-turbo-16k",
-                "gpt-3.5-turbo-0613","gpt-3.5-turbo-16k-0613","gpt-3.5-turbo-0301"));
+                "gpt-3.5-turbo-0613","gpt-3.5-turbo-16k-0613","gpt-3.5-turbo-0301","gpt-4"));
         models_old = new ArrayList<>(Arrays.asList("text-davinci-003", "text-davinci-002"));
         handler = new Handler(Looper.getMainLooper()){
             @Override
@@ -240,16 +240,16 @@ public class Chat extends AppCompatActivity {
                 uuid = UUID.randomUUID();
                 switch (mApi.use_vps) {
                     case "美国 S2":
-                        serverURL = "wss://app.i64.cc/webSocket/";
+                        serverURL = ""; //wss://app.i64.cc/webSocket/";
                         break;
                     case "自定义服务器":
-                        serverURL = mApi.custom_url;
+                        serverURL = ""; //mApi.custom_url;
                         break;
                     case "美国 S1":
-                        serverURL = "wss://api.i64.cc/webSocket/";
+                        serverURL = ""; //"wss://api.i64.cc/webSocket/";
                         break;
                     default:
-                        serverURL = "wss://api.hook.i64.cc/webSocket/";
+                        serverURL = ""; //"wss://api.hook.i64.cc/webSocket/";
                         break;
                 }
                 try {
@@ -387,6 +387,7 @@ public class Chat extends AppCompatActivity {
             }
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                sendHandlerMsg(USER_MSG, e.toString());
                 sendHandlerMsg(BOT_CONTINUE, "SERVER ERROR 0X3H\n");
                 sendHandlerMsg(BOT_END, "");
             }
